@@ -16,7 +16,7 @@ Para que os dois desenvolvedores possam avançar em paralelo ou de forma alterna
 4. Teste a entrega localmente, marque `[x]` na etapa correspondente dentro deste arquivo `GUIA.md` e faça `git add . && git commit -m "feat: conclui etapa X" && git push origin main`.
 
 ### Quadro de Progresso do Projeto
-- [ ] **Etapa 1:** Setup de Dependências, `.env.example` e Pool de Chaves (`core/key_pool.py`)
+- [x] **Etapa 1:** Setup de Dependências, `.env.example` e Pool de Chaves (`core/key_pool.py`)
 - [ ] **Etapa 2:** Contratos de Dados Pydantic e Estado Global Singleton (`core/models.py` e `core/store.py`)
 - [ ] **Etapa 3:** Heurísticas de Segurança, Árbitro de Vazamento e Grafo LangGraph (`core/security.py` e `core/graph.py`)
 - [ ] **Etapa 4:** Motor de Disparo Concorrente Pós-Play (`core/runner.py`)
