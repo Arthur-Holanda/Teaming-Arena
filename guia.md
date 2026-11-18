@@ -18,7 +18,7 @@ Para que os dois desenvolvedores possam avançar em paralelo ou de forma alterna
 ### Quadro de Progresso do Projeto
 - [x] **Etapa 1:** Setup de Dependências, `.env.example` e Pool de Chaves (`core/key_pool.py`)
 - [x] **Etapa 2:** Contratos de Dados Pydantic e Estado Global Singleton (`core/models.py` e `core/store.py`)
-- [ ] **Etapa 3:** Heurísticas de Segurança, Árbitro de Vazamento e Grafo LangGraph (`core/security.py` e `core/graph.py`)
+- [x] **Etapa 3:** Heurísticas de Segurança, Árbitro de Vazamento e Grafo LangGraph (`core/security.py` e `core/graph.py`)
 - [ ] **Etapa 4:** Motor de Disparo Concorrente Pós-Play (`core/runner.py`)
 - [ ] **Etapa 5:** Roteador Principal com Menu Lateral Oculto (`app.py`)
 - [ ] **Etapa 6:** Telas do Apresentador/Host — Tela 1 (`/INICIO`) e Tela 2 (`/Lobby`)
