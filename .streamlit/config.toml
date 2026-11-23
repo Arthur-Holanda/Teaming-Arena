@@ -1,0 +1,11 @@
+# Configuração do Streamlit para o Teaming Arena (vale localmente e no Streamlit Cloud).
+
+[server]
+# Desliga o "vigia de arquivos" (recarregar o app ao salvar o código).
+# Motivo: depois de CADA execução de página, incluindo as atualizações automáticas que
+# cada celular faz a cada 1,5 s, ele percorre os ~1.600 módulos carregados (langchain,
+# langgraph, Gemini...) na thread principal do servidor. Com vários celulares isso travava
+# o app por vários segundos durante a rodada.
+# Em desenvolvimento: depois de editar o código, reinicie o `streamlit run app.py`
+# (ou rode com `--server.fileWatcherType auto` para ter o recarregamento automático).
+fileWatcherType = "none"
