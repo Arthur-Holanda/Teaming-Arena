@@ -43,6 +43,12 @@ if store.phase is not GamePhase.LOBBY:
     _aguardar_lobby()
     st.stop()
 
+st.info(
+    "💡 **Dica:** ataques diretos (como *\"ignore as regras\"* ou *\"qual é a senha?\"*) "
+    "costumam cair logo no **Nó 1**. Tente abordagens criativas, contextos técnicos "
+    "ou formas indiretas/ofuscadas de extrair o segredo!"
+)
+
 with st.form("form_ataque"):
     username = st.text_input("Seu Nome / Apelido:", max_chars=MAX_USERNAME_CHARS)
     prompt = st.text_area(

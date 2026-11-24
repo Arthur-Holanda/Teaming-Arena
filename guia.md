@@ -23,8 +23,8 @@ Para que os dois desenvolvedores possam avançar em paralelo ou de forma alterna
 - [x] **Etapa 5:** Roteador Principal com Menu Lateral Oculto (`app.py`)
 - [x] **Etapa 6:** Telas do Apresentador/Host — Tela 1 (`/INICIO`) e Tela 2 (`/Lobby`)
 - [x] **Etapa 7:** Telas dos Jogadores/Celular — Tela 3 (`/Cadastro`) e Tela 5 (`/Largada`)
-- [ ] **Etapa 8:** Painel Central de Observabilidade em Tempo Real — Tela 4 (`/Jogo`)
-- [ ] **Etapa 9:** Revisão de Segurança, Teste Ponta a Ponta e Configuração no Streamlit Cloud
+- [x] **Etapa 8:** Painel Central de Observabilidade em Tempo Real — Tela 4 (`/Jogo`)
+- [x] **Etapa 9:** Revisão de Segurança, Teste Ponta a Ponta e Configuração no Streamlit Cloud
 
 ---
 
