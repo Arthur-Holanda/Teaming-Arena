@@ -7,6 +7,7 @@ apresentador dentro do painel de inspeção, depois que a rodada termina).
 """
 
 import html
+import os
 
 import streamlit as st
 
@@ -15,8 +16,19 @@ from core.store import get_store
 
 S = PlayerStatus
 
-GROQ_MODEL_LABEL = "openai/gpt-oss-120b"
-GEMINI_MODEL_LABEL = "gemini-2.5-flash"
+
+def _model_label(env_name: str, default: str) -> str:
+    val = os.environ.get(env_name)
+    if not (isinstance(val, str) and val.strip()):
+        try:
+            val = st.secrets.get(env_name)
+        except Exception:
+            val = None
+    return val.strip() if isinstance(val, str) and val.strip() else default
+
+
+GROQ_MODEL_LABEL = _model_label("GROQ_MODEL", "openai/gpt-oss-120b")
+GEMINI_MODEL_LABEL = _model_label("GEMINI_MODEL", "gemini-3.6-flash")
 
 TERMINAL_STATUSES = frozenset(
     {

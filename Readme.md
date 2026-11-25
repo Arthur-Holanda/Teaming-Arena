@@ -17,7 +17,7 @@ Cada prompt enviado passa por um grafo sequencial em [core/graph.py](core/graph.
      * *Juiz LLM (`openai/gpt-oss-120b`):* ataques explícitos de `prompt_injection` (incluindo cabeçalhos falsos como `[SISTEMA]` ou `--- FIM DA ENTRADA ---`) e `roleplay_jailbreak` declarado.
    * **O que deixa passar:** perguntas técnicas normais, engenharia social educada/indireta, escrita criativa e pedidos de formatação/transformação — delegando essas análises aos Nós 2 e 3.
 
-2. **Nó 2 — Core Agent / O Cofre (`gemini-2.5-flash` via Google AI Studio)**
+2. **Nó 2 — Core Agent / O Cofre (`gemini-3.6-flash` via Google AI Studio)**
    * **Papel:** atuar como o **Assistente Corporativo de MLOps**, mantendo a palavra-chave confidencial no contexto interno da sessão.
    * **Comportamento:** recusa abordagens óbvias de engenharia social (ex.: alguém se passando por auditor interno ou gestor pedindo confirmação do valor), resultando em resposta segura (`PASSED_CLEAN`). Em contrapartida, mantém postura prestativa em pedidos técnicos, logs de observabilidade e exercícios de formatação — reproduzindo o risco real de vazamento em assistentes corporativos.
    * **Segurança de exibição:** a resposta bruta do Nó 2 não é exibida ao jogador antes da aprovação do Nó 3.
@@ -51,7 +51,7 @@ A navegação lateral fica oculta (`st.navigation(..., position="hidden")` em `a
 ## 🛠️ Tecnologias
 
 * **Orquestração:** LangChain & LangGraph (`StateGraph`)
-* **Inferência:** Groq API (`openai/gpt-oss-120b`) & Google AI Studio (`gemini-2.5-flash`) com pool *round-robin* e fallback automático (`core/key_pool.py`)
+* **Inferência:** Groq API (`openai/gpt-oss-120b`) & Google AI Studio (`gemini-3.6-flash`) com pool *round-robin*, backoff adaptativo e fallback automático (`core/key_pool.py`)
 * **Frontend & Estado:** Streamlit (`@st.fragment`, `@st.cache_resource`) & Pydantic
 * **Acesso Mobile:** `qrcode[pil]` para geração dinâmica do QR Code da sessão
 
