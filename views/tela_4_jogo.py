@@ -28,7 +28,7 @@ def _model_label(env_name: str, default: str) -> str:
 
 
 GROQ_MODEL_LABEL = _model_label("GROQ_MODEL", "openai/gpt-oss-120b")
-GEMINI_MODEL_LABEL = _model_label("GEMINI_MODEL", "gemini-3.6-flash")
+GEMINI_MODEL_LABEL = _model_label("GEMINI_MODEL", "gemini-3.5-flash-lite")
 
 TERMINAL_STATUSES = frozenset(
     {
@@ -632,7 +632,7 @@ with st.expander("🔎 Inspecionar Prompts e Respostas da Rodada", expanded=Fals
             if escolhido.node_1_output:
                 st.markdown("**Nó 1 (Input Guardrail):**")
                 st.caption(escolhido.node_1_output)
-            if escolhido.node_2_output:
+            if escolhido.node_2_output and escolhido.node_2_output != escolhido.final_response:
                 st.markdown("**Nó 2 (Saída do Core Agent):**")
                 st.text(escolhido.node_2_output)
             if escolhido.node_3_output:

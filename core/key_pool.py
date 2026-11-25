@@ -37,7 +37,7 @@ from pydantic import BaseModel
 logger = logging.getLogger(__name__)
 
 GROQ_DEFAULT_MODEL = "openai/gpt-oss-120b"
-GEMINI_DEFAULT_MODEL = "gemini-3.6-flash"
+GEMINI_DEFAULT_MODEL = "gemini-3.5-flash-lite"
 
 # De 1 até 3 chaves gratuitas por provedor (GROQ_API_KEY_1..3 / GEMINI_API_KEY_1..3).
 MAX_KEYS_PER_PROVIDER = 3
